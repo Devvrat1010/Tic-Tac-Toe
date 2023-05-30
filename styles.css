@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: antiquewhite;
+    gap: 10px;
+}
+
+.container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: fit-content;
+    /* align-tracks: space-between; */
+
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color:aqua ; */
+}
+
+.o{
+    background-image: url("images/X.gif");
+    background-image: url("images/O.gif");
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 181, 236);
+    background-position: 0px;
+}
+.x{
+    background-image: url("images/X.gif");
+    /* background-image: url("images/O.gif"); */
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 181, 236);
+    background-position: 0px;
+}
+
+#button{
+    margin-top: 30px;
+}
