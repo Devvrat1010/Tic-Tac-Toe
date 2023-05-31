@@ -1,30 +1,36 @@
 let playerone=true
 let boxes=document.querySelectorAll(".box")
 let btn=document.getElementById("button")
+let end="false"
 function turn(element){
-    if (playerone){
-        if(!(element.classList.contains("true"))){
-            element.classList.add("input")
-            element.classList.add("true")
-            element.innerText="X"
-            if  (checkResult("X",element)){
+    if (end=="true"){
+        return
+    }
+    else{
+        if (playerone){
+            if(!(element.classList.contains("true"))){
+                element.classList.add("input")
+                element.classList.add("true")
+                element.innerText="X"
+                if  (checkResult("X",element)){
+                }
+
+                playerone =!playerone
             }
 
-            playerone =!playerone
         }
 
-    }
-    
-    else {
-        if(!(element.classList.contains("true"))){
-            element.classList.add("input");
-            // console.log(element)
-            element.classList.add("true")
-            element.innerText="O"
-            if (checkResult("O",element)){
-                return true
+        else {
+            if(!(element.classList.contains("true"))){
+                element.classList.add("input");
+                // console.log(element)
+                element.classList.add("true")
+                element.innerText="O"
+                if (checkResult("O",element)){
+                    return true
+                }
+                playerone =!playerone
             }
-            playerone =!playerone
         }
     }
 
@@ -107,6 +113,7 @@ function checkResult(X,element){
                     let res=document.getElementsByClassName("result")[0]
                     let ans=search[winningPos[i][curr]].innerText
                     res.innerText="Winner " + ans
+                    end="true"
                 }
             }
         }
