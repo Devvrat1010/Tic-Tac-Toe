@@ -1,6 +1,7 @@
 body{
     height: 100vh;
     margin: 0;
+    background-color: rgb(58, 58, 58);
 }
 
 .box{
@@ -15,13 +16,15 @@ span{
     padding: 20px;
 }
 .container{
+    margin-top: 20px;
     background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     width: fit-content;
-    /* align-tracks: space-between; */
+    border-style: solid;
+    border-width: 10px;
 
 }
 
@@ -31,7 +34,6 @@ span{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color:aqua ; */
 }
 
 .input{
@@ -40,10 +42,6 @@ span{
     align-items: center;
     font-size: 80px;
 }
-.matrice{
-    font-size: 40px;
-
-}
 
 .true{
     
@@ -51,30 +49,29 @@ span{
 .winner{
     background-color: green;
 }
-.loser{
 
-}
 .result{
     padding-top: 20px;
     font-size: 40px;
+    padding-bottom: 20px;
+    color: rgb(64, 255, 0);
 }
-/* .o{
-    background-image: url("images/X.gif");
-    background-image: url("images/O.gif");
-    background-size: 110px;
-    background-repeat: no-repeat;
-    background-color: rgb(0, 181, 236);
-    background-position: 0px;
-}
-.x{
-    background-image: url("images/X.gif"); */
-    /* background-image: url("images/O.gif"); */
-    /* background-size: 110px;
-    background-repeat: no-repeat;
-    background-color: rgb(0, 181, 236);
-    background-position: 0px;
-} */
+
 
 #button{
     margin-top: 30px;
+}
+
+
+.play-again{
+    margin-top: 50px;
+    height: 60px;
+    width: 150px;
+    border-radius: 40px;
+    font-size: 25px;
+    background-color: rgb(3, 159, 0);
+}
+.play-again:hover{
+    transition-duration: 150ms;
+    background-color: rgb(9, 223, 13);
 }
