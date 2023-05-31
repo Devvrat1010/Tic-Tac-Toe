@@ -19,7 +19,7 @@ function turn(element){
             }
 
         }
-
+        
         else {
             if(!(element.classList.contains("true"))){
                 element.classList.add("input");
@@ -112,8 +112,11 @@ function checkResult(X,element){
                     }
                     let res=document.getElementsByClassName("result")[0]
                     let ans=search[winningPos[i][curr]].innerText
-                    res.innerText="Winner " + ans
-                    end="true"
+                    res.innerText="Winner is " + ans
+                    end="true"       
+                    let playagain=document.getElementById("plays")
+                    playagain.innerText="Play again"
+                    playagain.classList.add("play-again")             
                 }
             }
         }
